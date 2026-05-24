@@ -8,13 +8,13 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <style>
-        /* التنسيق اللوني الجديد بناءً على الصورة الأخيرة (ذهبي برونزي فاخر) */
+        /* الهوية البصرية الجديدة: الأزرق الملكي الداكن والذهبي الفاخر */
         :root {
-            --bg-deep: #14110f; 
-            --section-bg: #1c1816; 
-            --gold-primary: #c5a059; 
+            --bg-deep: #060a17; /* أزرق داكن جداً للموقع */
+            --section-bg: #0b152d; /* أزرق ملكي متناسق للأقسام */
+            --gold-primary: #c5a059; /* الذهبي البرونزي الفاخر */
             --gold-dark: #8e6f34;
-            --card-bg: #231e1b;
+            --card-bg: #111e3d; /* أزرق فاتح قليلاً للمربعات الداخلية */
             --text-light: #e6dfd9;
         }
 
@@ -27,7 +27,7 @@
             overflow-x: hidden;
         }
 
-        /* شاشة البداية الترحيبية النظيفة (بدون صور أو شعارات) */
+        /* شاشة البداية الترحيبية (أزرق داكن بإطار ذهبي) */
         #welcome-screen {
             position: fixed;
             top: 0; left: 0;
@@ -53,7 +53,7 @@
             color: var(--gold-primary);
             font-size: 2.8rem;
             margin-bottom: 40px;
-            text-shadow: 0 4px 15px rgba(197, 160, 89, 0.3);
+            text-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
             text-align: center;
             font-weight: bold;
         }
@@ -61,7 +61,7 @@
         /* زر ابدأ التفاعلي الفاخر */
         .start-btn {
             background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-            color: #14110f;
+            color: #060a17;
             border: 1px solid var(--gold-primary);
             padding: 16px 70px;
             font-size: 1.6rem;
@@ -69,17 +69,17 @@
             font-family: 'Cairo', sans-serif;
             border-radius: 8px;
             cursor: pointer;
-            box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
             transition: 0.3s ease;
         }
 
         .start-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 5px 25px rgba(197, 160, 89, 0.5);
+            box-shadow: 0 5px 25px rgba(197, 160, 89, 0.6);
             background: linear-gradient(135deg, #dfb96f, var(--gold-primary));
         }
 
-        /* هيدر الموقع بدون صورة وبدون شعار */
+        /* هيدر الموقع بالأزرق الملكي */
         header {
             background: var(--section-bg);
             padding: 50px 20px;
@@ -89,20 +89,20 @@
             align-items: center;
             border-bottom: 3px solid var(--gold-primary);
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
 
         header h1 { 
             font-size: 2.6rem; 
             color: var(--gold-primary); 
             margin: 0; 
-            text-shadow: 0 2px 8px rgba(197, 160, 89, 0.3); 
+            text-shadow: 0 2px 8px rgba(197, 160, 89, 0.4); 
             font-weight: bold;
         }
 
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
 
-        /* الأقسام والمربعات المحسنة */
+        /* الأقسام والمربعات المحسنة بالأزرق والذهبي */
         section {
             background: var(--section-bg);
             margin-bottom: 35px;
@@ -112,7 +112,7 @@
             border-left: 1px solid rgba(197, 160, 89, 0.1);
             border-top: 1px solid rgba(197, 160, 89, 0.1);
             border-bottom: 1px solid rgba(197, 160, 89, 0.1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         h2 { 
@@ -134,14 +134,15 @@
             background: var(--card-bg);
             padding: 25px;
             border-radius: 8px;
-            border: 1px solid rgba(197, 160, 89, 0.1);
+            border: 1px solid rgba(197, 160, 89, 0.15);
             text-align: center;
             transition: 0.3s;
         }
         
         .card:hover {
-            border-color: rgba(197, 160, 89, 0.4);
+            border-color: var(--gold-primary);
             transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .staff-title { color: var(--gold-primary); font-weight: bold; margin-bottom: 8px; font-size: 0.95rem; }
@@ -151,14 +152,14 @@
             display: inline-block; 
             margin-top: 12px; 
             padding: 4px 14px; 
-            background: #14110f; 
+            background: var(--bg-deep); 
             color: var(--gold-primary); 
             border-radius: 4px;
             font-size: 0.85rem;
             border: 1px solid rgba(197, 160, 89, 0.2);
         }
 
-        /* تنسيق القوائم كما في تصميمك الأخير */
+        /* تنسيق القوائم بالخلفية الزرقاء المتناسقة */
         .rules-list { list-style: none; padding: 0; margin: 0; }
         .rules-list li {
             background: var(--card-bg);
@@ -169,13 +170,14 @@
             border-right: 3px solid var(--gold-primary);
             font-size: 1.05rem;
             transition: 0.2s;
+            border-top: 1px solid rgba(255,255,255,0.02);
         }
 
         .rules-list li:hover {
-            background: #2b2521;
+            background: #16264d;
         }
 
-        /* النجمة الذهبية العسكرية الأنيقة المتواجدة في تصميمك */
+        /* النجمة الذهبية العسكرية قبل القوانين */
         .rules-list li::before {
             content: "✦";
             position: absolute;
@@ -186,10 +188,10 @@
             font-size: 1.1rem;
         }
 
-        /* قسم الأوامر البرمجية المنسق */
+        /* قسم الأوامر البرمجية المنسق بالذهبي */
         .cmd-code {
             background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
-            color: #14110f;
+            color: #060a17;
             padding: 12px;
             border-radius: 6px;
             display: block;
@@ -202,7 +204,7 @@
 
         .warning { color: #ec6464; font-size: 0.85rem; margin-top: 10px; }
 
-        /* أزرار الروابط والمستندات */
+        /* أزرار الروابط والمستندات بحدود ذهبية */
         .links-container {
             display: flex;
             justify-content: center;
@@ -224,12 +226,12 @@
 
         .btn-link:hover {
             background: var(--gold-primary);
-            color: #14110f;
+            color: #060a17;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.2);
+            box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3);
         }
 
-        footer { text-align: center; padding: 50px 20px; color: #5c534e; font-size: 0.9rem; }
+        footer { text-align: center; padding: 50px 20px; color: #435070; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -259,7 +261,7 @@
                     <div class="discord-tag">1s2m.</div>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 25px; color: #8c8077;">
+            <div style="text-align: center; margin-top: 25px; color: #61739b;">
                 <p>إدارة المدربين: منذر الشريف (lgnd._5) | صالح القحطاني (15n1)</p>
             </div>
         </section>
